@@ -12,68 +12,7 @@ function App() {
          <h2>Pay as you need</h2>
          <p>
          Your marketing goal drives your technical tools.
-        </p>
-        <a
-          className="App-link"
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Marketing Goal
-          
-        </a>
-
-        <a
-          className="App-link"
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Technichal and political advices
-
-        </a>
-
-        <a
-          className="App-link"
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Fast website
-          
-        </a>
-
-        <a
-          className="App-link"
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Google Ads
-          
-        </a>
-
-        <a
-          className="App-link"
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Google Tag Managerx
-          
-        </a>
-
-        <a
-          className="App-link"
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          CRO
-          
-        </a>
-
-
+        </p>    
       </header>
     </div>
   );
