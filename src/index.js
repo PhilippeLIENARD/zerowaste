@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Header from './Components/Header';
+// import Header from './Components/Header';
 import Card from './Components/Card';
 import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(<Header />, document.getElementById('root'));
-ReactDOM.render(<Card link="#" title="Certification Google Adwords" />, document.getElementById('main'));
+ReactDOM.render(<Card />, document.getElementById('root'));
+// ReactDOM.render(<Card />, document.getElementById('main'));
 
 
 // If you want to start measuring performance in your app, pass a function

@@ -1,45 +1,49 @@
-/* eslint-disable jsx-a11y/anchor-has-content */
-function Card({link, title, children, bg}) {
+const projetcs = [
+
+    {
+        title : "Adwords" ,
+        description : "Certification earned" ,
+        link : "https://skillshop.exceedlms.com/profiles/71ae9f8215d444b5bc15e8601278c097"
+
+    },
+    {
+        title : "Conversion Rate Optimization" ,
+        description : "Mobile experience optimisation" ,
+        link : "https://skillshop.exceedlms.com/student/award/uzr1xLgdEDrewZXBQFtmVMUZ"
+
+    },
+    {
+        title : "Google Tag Manager" ,
+        description : "Get the metrics to prioritize the testing of your hypothesis" ,
+        link : "https://skillshop.exceedlms.com/profiles/71ae9f8215d444b5bc15e8601278c097"
+
+    }
+
+];
+
+projetcs.map(Card);
+
+function Card ({thisproject}) {
     return (
         <>
-         <a
-            href={link}
-            target="_blank"
-            rel="noreferrer noopener"
-            sx={{
-            width: `100%`,
-            boxShadow: `lg`,
-            position: `relative`,
-            textDecoration: `none`,
-            borderRadius: `lg`,
-            px: 4,
-            py: [4, 5],
-            color: `white`,
-            background: bg || `none`,
-            transition: `all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important`,
-            "&:hover": {
-                color: `white !important`,
-                transform: `translateY(-5px)`,
-                boxShadow: `xl`,
-            },
-            }}
-            
-         >
-            <div sx={{ opacity: 0.85, textShadow: `0 2px 10px rgba(0, 0, 0, 0.3)` }}>{children}</div>
-            <div
-            sx={{
-                textTransform: `uppercase`,
-                letterSpacing: `wide`,
-                pt: 4,
-                fontSize: [4, 5],
-                fontWeight: `medium`,
-                lineHeight: 1,
-            }}
-            >
-            {title}
-            </div>
-         </a>
+            <a 
+            href="{thisproject.link}" 
+            target="_blank" 
+            rel="noreferrer noopener">
+
+                <div>
+
+                    <h2>{thisproject.title}</h2>
+
+                    <p>{thisproject.description}</p>
+
+                </div>
+
+            </a>
+
         </>
     );
+
 }
+
 export default Card;
