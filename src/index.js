@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// import Header from './Components/Header';
-import Card from './Components/Card';
+import Page from './Components/Page';
 import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(<Card />, document.getElementById('root'));
-// ReactDOM.render(<Card />, document.getElementById('main'));
+
+
+ReactDOM.render(<Page />, document.getElementById('root'));
+
 
 
 // If you want to start measuring performance in your app, pass a function
