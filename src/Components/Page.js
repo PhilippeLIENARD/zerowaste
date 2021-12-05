@@ -1,4 +1,3 @@
-import HeadDomTag from './HeadDomTag';
 import logo from '../logo.svg';
 import '../Page.css';
 import Card from './Card';
