@@ -29,7 +29,7 @@ export const projects = [
         title : "Fast websites" ,
         description : "75% of users leave a slow website to the competition",
         link : "https://skillshop.exceedlms.com/profiles/71ae9f8215d444b5bc15e8601278c097",
-        bg : "linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
+        bg : "linear-gradient(to right, #b72fff 0%, #0089ff 100%)"
   
     }
   

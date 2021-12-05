@@ -6,9 +6,9 @@ import {projects} from '../ContentDatas/ProjectsContent.js';
 
 function Page() {
   return (
-    <>
+    <>    
     
-    
+
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
@@ -28,7 +28,7 @@ function Page() {
         <div className="bgStyle"></div>
         
       </div>
-    
+
 
     </>
   );
