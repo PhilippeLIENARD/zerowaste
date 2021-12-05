@@ -27,7 +27,7 @@ body{
   font-size: calc(10px + 2vmin);
   color: white;
   z-index: 3;  
-  position: sticky;
+  position: relative;
 }
 
 .App-link {
