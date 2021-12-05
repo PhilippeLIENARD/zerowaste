@@ -17,8 +17,15 @@ function Page() {
          Your marketing goal drives your technical tools.
         </p>    
       </header>
-      <Card projects={projects} />
+         
+      <div class="cardsSection">
+        <Card projects={projects} />
+      </div>
+
+      <div class="bgStyle"></div>
+      
     </div>
+
   );
 }
 

@@ -1,13 +1,15 @@
 
-function Card(props) {
+function Card(props) {    
 
-    const content = props.projects.map((project) =>        
+    const content = props.projects.map((project) =>   
+         
             <a 
             key={project.id}
             href={project.link}
             target="_blank" 
-            rel="noreferrer noopener">
-
+            rel="noreferrer noopener"
+            style={{background: project.bg}}           
+            >
                 <div>
 
                     <h2>{project.title}</h2>
