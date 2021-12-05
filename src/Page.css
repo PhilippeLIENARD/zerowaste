@@ -19,7 +19,7 @@ body{
 
 .App-header {
  
-  min-height: 70vh;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,6 +28,7 @@ body{
   color: white;
   z-index: 3;  
   position: relative;
+  padding: 0 50px;
 }
 
 .App-link {
