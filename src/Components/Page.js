@@ -6,18 +6,18 @@ import {projects} from '../ContentDatas/ProjectsContent.js';
 
 function Page() {
   return (
-    <>    
+    <>
     
-
+    
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           
           <h1>zerowaste.consulting</h1>
 
-          <h2>Your marketing goals drive your technical tools.</h2>
+          <h2>Let your marketing goals drive your technical tools</h2>
           <p>
-          Pay as you need.
+         Sharp invest by your needs
           </p>    
         </header>
           
@@ -28,7 +28,7 @@ function Page() {
         <div className="bgStyle"></div>
         
       </div>
-
+    
 
     </>
   );
