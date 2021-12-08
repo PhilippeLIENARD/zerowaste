@@ -15,9 +15,9 @@ function Page() {
           
           <h1>zerowaste.consulting</h1>
 
-          <h2>Your marketing goals drive your technical tools.</h2>
+          <h2>Let your marketing goals drive your technical tools</h2>
           <p>
-          Pay as you need.
+         Sharp invest by your needs
           </p>    
         </header>
           
