@@ -30,7 +30,7 @@ export const projects = [
         title : "Google Tag Manager" ,
         description : "Get the metrics to prioritize the testing of your hypothesis" ,
         link : "https://skillshop.exceedlms.com/profiles/71ae9f8215d444b5bc15e8601278c097",
-        bg : "linear-gradient(to right, 009245 0%, #FCEE21 100%)"
+        bg : "linear-gradient(to right, #009245 0%, #FCEE21 100%)"
   
     }
   
