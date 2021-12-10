@@ -51,7 +51,7 @@ function Card(props){
             >
                 {logThis}
 
-                {/* {(project.id === 1) ? addImage(imageCro , project.altimage) : null}             */}
+                {(project.id === 1) ? addImage(imageCro , project.altimage) : null}            
                         
                 <div>
                
