@@ -33,10 +33,12 @@ function Card(props){
         return <img scr={thisImage} alt={thisAlt} />
     }
 
-   
+   console.log('imageCro -> ' + imageCro)
      
     const content = props.projects.map((project) =>    
             
+
+
                    
             <div 
             key={project.id}  
