@@ -1,5 +1,10 @@
 import React from 'react';
-import imageCro from '../images/optimisation-CRO-google-ads.jpg';
+import imageCro from '../images/optimisation-CRO-google.jpg';
+
+
+function PicTest(props){
+    return <img src={imageCro} alt={props.alt}  />
+}
 
 function Card(props){    
 
@@ -33,7 +38,15 @@ function Card(props){
         return <img scr={thisImage} alt={thisAlt} />
     }
 
-   console.log('imageCro -> ' + imageCro)
+    function addImageComponent(){
+        // let thisComponent = <div className='test'></div>;
+        let createComponent = document.createElement("PicTest");
+        document.getElementById('xtra_1').appendChild(createComponent);
+
+
+    }
+
+    // console.log('imageCro -> ' + imageCro)
      
     const content = props.projects.map((project) =>    
             
@@ -48,12 +61,17 @@ function Card(props){
             className="card"
             style={{background: project.bg}}
             id={project.id}
-            onClick={()=>{alertThis(project.title) ; isClicked() ; logFunction(project.id) ;}}
+            onClick={()=>{alertThis(project.title) ; isClicked() ; logFunction(project.id) ; addImageComponent() ;}}
                 
             >
-                {logThis}
+               
+                {/* { (() => this.cardClicked === false) ? <PicTest alt={project.altimage} /> : null } */}
+                
+                <span id={project.extracontent}></span>
 
-                {(project.id === 1) ? addImage(imageCro , project.altimage) : null}            
+                {/* {logThis} */}
+              
+                {(project.id === 1) ? null : null}            
                         
                 <div>
                

@@ -9,7 +9,7 @@ export const projects = [
         image : "",
         altimage : "",
         longtext : "",
-        extracontent : "",
+        extracontent : "xtra_0",
         className : ""
         
         
@@ -21,10 +21,10 @@ export const projects = [
         description : "Mobile experience optimisation" ,
         link : "https://skillshop.exceedlms.com/student/award/uzr1xLgdEDrewZXBQFtmVMUZ",
         bg : "linear-gradient(to right, #662D8C 0%, #ED1E79 100%)",
-        image : "../images/optimisation-CRO-google-ads.jpg",
+        image : require("../images/optimisation-CRO-google.jpg").default,
         altimage : "CRO",
         longtext : "",
-        extracontent : "",
+        extracontent : "xtra_1",
         className : ""
   
     },
@@ -37,7 +37,7 @@ export const projects = [
         image : "",
         altimage : "",
         longtext : "",
-        extracontent : "",
+        extracontent : "xtra_2",
         className : ""
   
     },
@@ -50,7 +50,7 @@ export const projects = [
         image : "",
         altimage : "",
         longtext : "",
-        extracontent : "",
+        extracontent : "xtra_3",
         className : ""
   
     }

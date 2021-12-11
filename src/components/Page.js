@@ -1,8 +1,9 @@
 import logo from '../images/logo.svg';
-import imageCro from '../images/optimisation-CRO-google-ads.jpg';
 import '../Page.css';
 import {projects} from '../dataContent/ProjectsContent.js';
 import Card from './Card';
+
+
 
 
 
