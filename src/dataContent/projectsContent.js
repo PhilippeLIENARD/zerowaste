@@ -13,6 +13,7 @@ export const projects = [
         className : ""
         
         
+        
   
     },
     {
@@ -24,8 +25,9 @@ export const projects = [
         image : require("../images/optimisation-CRO-google.jpg").default,
         altimage : "CRO",
         longtext : "",
-        extracontent : "xtra_1",
+        extracontent : "cd",
         className : ""
+        
   
     },
     {
@@ -39,6 +41,7 @@ export const projects = [
         longtext : "",
         extracontent : "xtra_2",
         className : ""
+        
   
     },
     {
@@ -52,6 +55,7 @@ export const projects = [
         longtext : "",
         extracontent : "xtra_3",
         className : ""
+        
   
     }
   

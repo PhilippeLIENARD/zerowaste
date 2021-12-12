@@ -1,15 +1,18 @@
 import logo from '../images/logo.svg';
 import '../Page.css';
-import {projects} from '../dataContent/ProjectsContent.js';
 import Card from './Card';
+import {projects} from '../dataContent/projectsContent.js';
+
+
+const Page = () => {
+ 
+console.log(projects);
 
 
 
+  const content =    
 
-
-function Page() {
-  return (
-    <>
+  
        
       <div className="App">
         <header className="App-header">
@@ -24,17 +27,35 @@ function Page() {
         </header>
           
         <div className="cardsSection">
-          <Card projects={projects}>
-          </Card>
+
+        {
+          projects.map((project) => 
+          
+            <Card 
+            key={project.id}
+            id={project.id}
+            title={project.title}
+            description={project.description}
+            // bigPicture={project.bigPicture}
+            bg={project.bg}
+            />
+            )
+        }
+               
+          
         </div>
 
-        <div className="bgStyle"></div>
+        <div className="bgStyle"></div>            
         
-      </div>
-    
+      </div>    
 
-    </>
-  );
+    
+      
+      return (
+        <>
+            {content}
+        </>
+    );
 }
 
 export default Page;
