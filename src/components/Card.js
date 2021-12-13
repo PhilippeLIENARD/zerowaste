@@ -1,26 +1,30 @@
-import React, { useState } from 'react';
-
-
-const Card = (props) => {    
+const Card = (props) => {   
     
-  const[cliked , setCliked]= useState(false);
+    // console.log('props ');
+    
+    let iamCliked = () => (props.clickState === props.id) ? true : false;
+
+    let thisImage = () => <img src={props.image} alt={props.altimage} />;
 
     const content = 
              <div             
-            className="card"
+            className={iamCliked() ? props.className_2 : props.className}
             style={{background: props.bg}}
             id={props.id}
-            onClick={() => setCliked(!cliked) }
-        >
-              {String(cliked)}
-                        
-                <div>
+            onClick={() => props.setClikState(props.id) }
+            >
 
-                    {/* <h2> CARD </h2> */}
-                                
-                     <h2>{props.title}</h2>
+            {console.log("clickState value -> " + props.clickState + " this ID value ->  " + props.id )}
 
-                    <p>{(cliked === true) ? props.description : null}</p>
+                <div>                 
+                    
+                    <h2>{props.title}</h2>                    
+
+                    {iamCliked() ? '**** SELECTED !' : 'NOT SELECTED'}
+
+                    <p>{iamCliked() ? props.description : null}</p>
+
+                    {iamCliked()? thisImage() : null}
 
                 </div>
 
