@@ -25,7 +25,7 @@ export const projects = [
         image : require("../images/optimisation-CRO-google.jpg").default,
         altimage : "CRO",
         longtext : "",
-        extracontent : "cd",
+        extracontent : "xtra_1",
         className : ""
         
   

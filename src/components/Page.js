@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import logo from '../images/logo.svg';
 import '../Page.css';
 import Card from './Card';
@@ -5,14 +6,12 @@ import {projects} from '../dataContent/projectsContent.js';
 
 
 const Page = () => {
- 
+
+const[clickState , setClikState]= useState(null);
+
 console.log(projects);
 
-
-
-  const content =    
-
-  
+  const content =      
        
       <div className="App">
         <header className="App-header">
@@ -28,20 +27,26 @@ console.log(projects);
           
         <div className="cardsSection">
 
-        {
-          projects.map((project) => 
+        {      
+            
+            projects.map((project) => 
           
             <Card 
             key={project.id}
             id={project.id}
             title={project.title}
-            description={project.description}
-            // bigPicture={project.bigPicture}
+            description={project.description}            
             bg={project.bg}
+            clickState={clickState}
+            setClikState={setClikState}
+            
+           
             />
+            
             )
+           
         }
-               
+          
           
         </div>
 
