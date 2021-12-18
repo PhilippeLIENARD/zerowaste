@@ -1,14 +1,15 @@
-let idKey = -1;
+// let idKey = -1;
 const className = "card";
 const className_2 = "card cardOpen";
 const className_3 = "cardState_3";
-const className_4 = "card cardPop";
+const className_4 = "cardPop";
 const className_5 = "miniList";
 export const projects = [
 
     {
-        "id" : ++idKey ,
-        "contreId" : "noselection",
+        "id" : 0,
+        "contreId" : "noselection_0",
+        "cardPopId" : "cardPop_0",
         "title" : "The value of a fast site" ,
         "description" : "75% of users leave a slow website to the competition",
         "link" : "https://skillshop.exceedlms.com/profiles/71ae9f8215d444b5bc15e8601278c097",
@@ -28,8 +29,9 @@ export const projects = [
   
     },
     {
-        "id" : ++idKey ,
-        "contreId" : "noselection",
+        "id" : 1 ,
+        "contreId" : "noselection_1",
+        "cardPopId" : "cardPop_1",
         "title" : "Conversion Rate Optimization" ,
         "description" : "Mobile experience optimisation" ,
         "link" : "https://skillshop.exceedlms.com/student/award/uzr1xLgdEDrewZXBQFtmVMUZ",
@@ -47,8 +49,9 @@ export const projects = [
   
     },
     {
-        "id" : ++idKey ,
-        "contreId" : "noselection",
+        "id" : 2,
+        "contreId" : "noselection_2",
+        "cardPopId" : "cardPop_2",
         "title" : "Adwords" ,
         "description" : "Certification earned" ,
         "link" : "https://skillshop.exceedlms.com/profiles/71ae9f8215d444b5bc15e8601278c097",
@@ -66,8 +69,9 @@ export const projects = [
   
     },
     {
-        "id" : ++idKey ,
-        "contreId" : "noselection",
+        "id" : 3 ,
+        "contreId" : "noselection_3",
+        "cardPopId" : "cardPop_3",
         "title" : "Google Tag Manager" ,
         "description" : "Get the metrics to prioritize the testing of your hypothesis" ,
         "link" : "https://skillshop.exceedlms.com/profiles/71ae9f8215d444b5bc15e8601278c097",
