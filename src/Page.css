@@ -157,7 +157,6 @@ width: 40%;
 .cardPop{
   
   position: fixed;
-  background: orange;
   width: 100%;
   top: 0;
   right: 0;
@@ -165,9 +164,11 @@ width: 40%;
   z-index: 100000;
   align-items: center;
   display: flex;
-  height: 500px;
+  height: 90vh;
   justify-content: center;
   width: 100%;
+  color: white !important;
+  /* border-radius: 0 0 5px 5px; */
 
   
 
@@ -176,13 +177,29 @@ width: 40%;
 
 
 
-.card img {
+.card img, .cardPop img {
   width: 100%;
 }
 
+
+.homeIcon  {  
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  z-index: 10000000000;
+}
+
+.homeIcon svg {  
+  fill: #FFF;
+  width: 100px;
+  height: 100px;
+}
+
+
 @media only screen and  (max-width:768px) {
 
-  .cardsSection{
+.cardsSection{
   /* grid-template-columns: unset; */
   }
 

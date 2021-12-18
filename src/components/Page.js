@@ -8,11 +8,17 @@ import {projects} from '../dataContent/projectsContent.js';
 
 const Page = () => {
 
-const[selectedCard , setselectedCard]= useState(null);
+const[selectedCard , setSelectedCard] = useState(null);
 
-let thisCardPop =  String(selectedCard);   
+// const[closeCardPopStatus , setCloseCardPopStatus ] = useState(null);
+
+let thisCardPop =  parseInt(selectedCard);   
+
+// let thisCloseCardPopStatus = String(closeCardPopStatus);
 
 console.log ("-> thisCardPop -> " + thisCardPop);
+
+// console.log ("-> closeCardPopStatus -> " + thisCloseCardPopStatus);
 
 // let selectStatus = () => (selectedCard === null) ? false : true ;
 
@@ -24,26 +30,44 @@ console.log(projects);
        
       <div className="Page">
 
-     <Header />
+     
 
-      {/* {selectStatus() && 
-        <Header />} */}
+      {isNaN(thisCardPop) === true && 
+        <Header />}
 
       {isNaN(thisCardPop) !== true &&
             
          <CardPop
+          key={projects[thisCardPop].id}
+          id={projects[thisCardPop].id}
+          contreId={projects[thisCardPop].contreId}
+          className={projects[thisCardPop].className}
+          className_2={projects[thisCardPop].className_2}
+          className_3={projects[thisCardPop].className_3}
+          className_4={projects[thisCardPop].className_4}
+          className_5={projects[thisCardPop].className_5}    
           title={projects[thisCardPop].title}
+          description={projects[thisCardPop].description}
+          longtext={projects[thisCardPop].longtext}            
           bg={projects[thisCardPop].bg}
+          link={projects[thisCardPop].link}
+          image={projects[thisCardPop].image}
+          altimage={projects[thisCardPop].altimage}
+          selectedCard={selectedCard}
+          setSelectedCard ={setSelectedCard}
+          // closeCardPopStatus={closeCardPopStatus}
+          // setCloseCardPopStatus ={setCloseCardPopStatus}
            />
              
       }   
       
-      
+      {isNaN(thisCardPop) === true && 
+
       <div className="cardsSection">
 
         {      
             
-            projects.map((project) => 
+          projects.map((project) => 
           
             <Card 
             key={project.id}
@@ -62,16 +86,18 @@ console.log(projects);
             image={project.image}
             altimage={project.altimage}
             selectedCard={selectedCard}
-            setselectedCard ={setselectedCard}
+            setSelectedCard ={setSelectedCard}
             
             />
             
-            )
+          )
            
         }
           
           
       </div>
+
+    }
 
         <div className="bgStyle"></div>            
         
