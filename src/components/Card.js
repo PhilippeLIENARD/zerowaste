@@ -1,43 +1,61 @@
+import CardPop from "./CardPop";
+
 const Card = (props) => {   
     
     // console.log('props ');
     
-    let iamCliked = () => (props.clickState === props.id) ? true : false;
-
-    let thisImage = () => <img src={props.image} alt={props.altimage} />;
+    let iamCliked = () => (props.clickState === props.id) ? true : false;    
 
     const content = 
-             <div             
-            className={iamCliked() ? props.className_2 : props.className}
-            style={{background: props.bg}}
-            id={props.id}
-            // onClick={() => props.setClikState(props.id) }
-            onMouseOver={() => {props.setClikState(props.id) ; console.log("OVER -> " + props.clickState)}}
-            // onMouseOut={() => {props.setClikState(null) ; console.log("OUT -> " + props.clickState)}}
-            >
+    <>
+            
+                
+            {/* {iamCliked() && 
+            
+            <CardPop
+                 key={props.id}
+                 id={props.id}
+                 className={props.className}
+                 className_2={props.className_2}
+                 className_3={props.className_3} 
+                 className_4={props.className_4}  
+                 className_5={props.className_5}  
+                 title={props.title}
+                 description={props.description}
+                 longtext={props.longtext}            
+                 bg={props.bg}
+                 link={props.link}
+                 image={props.image}
+                 altimage={props.altimage}
+                 selectedCard={props.selectedCard}
+                 setClikState={props.setselectedCard}
+             />}    */}
+             
+           
+           
+                <div 
 
-            {console.log("clickState value -> " + props.clickState + " this ID value ->  " + props.id )}
+                    className={props.className}
+                    // className={props.className}
+                    style={{background: props.bg}}
+                    id={props.id}
+                    // onClick={() => props.setselectedCard(props.id) }
+                    onMouseOver={() => {props.setselectedCard(props.id)}}
+                    onMouseOut={() => {props.setselectedCard(props.contreId)}}
+                    >
 
-                <div>                 
-                    
-                    <h2>{props.title}</h2>                    
+                        {/* {console.log("selectedCard value -> " + props.selectedCard + " this ID value ->  " + props.id )} */}
+                        <h2>{props.title}</h2>  
 
-                    {iamCliked() ? '**** SELECTED !' : 'NOT SELECTED'}
-
-                    <p>{iamCliked() ? props.description : null}</p>
-
-                    {iamCliked()? thisImage() : null}
-
-                </div>
-
-        </div> 
+                </div> 
+          
       
-     
+    </>
        
     return (
-        <>
+    <>  
             {content}
-        </>
+    </>    
     );
 
 }

@@ -55,11 +55,8 @@ font-size: 18px;
 -webkit-text-size-adjust: 100%;
 text-align: left;
 box-sizing: inherit;
-/* display: grid;
-grid-template-columns: repeat(2, 1fr); */
-display: flex ;
-flex-wrap: wrap;
-align-items: center;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
 gap: 4rem;
 padding: 4rem;
 max-width: 1400px;
@@ -80,7 +77,7 @@ position: relative;
 border-radius: 0.5rem;
 padding: 2rem;
 background: linear-gradient(to right, rgb(212, 20, 90) 0%, rgb(251, 176, 59) 100%);
-/* transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s !important; */
+transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s !important;
 padding-top: 4rem;
 padding-bottom: 4rem;
 text-decoration: none;
@@ -88,45 +85,14 @@ transform: translateY(-5px);
 box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 color: white !important;
 z-index: 2;
-/* transition: all 2s !important; */
-height: 300px;
-width: 40%;
+transition: all 10s !important;
+height: 200px;
 
-}
-
-@keyframes cardOpenAnim {
-  from {height: 300px;}
-  to {height: 500px;}
-}
-
-@keyframes cardState_3_Anim {
-  from {opacity: 0;}
-  to {opacity: 1;}
 }
 
 .cardOpen {
-  /* min-height: 0; */
-
-  /* animation-name: cardOpenAnim ;
-  animation-duration: 0.2s; */
-  /* animation-delay: 0s; */
-  /* animation-fill-mode: forwards;
-
-  height: 500px; */
-  /* transition: all 2s !important; */
+  height: auto;
   /* position: fixed; */
-
-  transform: translateZ(0px);
-
-}
-
-.cardState_3{
-
-  /* animation-name : cardState_3_Anim ;
-  animation-duration: 1s; */
-  /* animation-delay: 1s; */
-  /* animation-fill-mode: forwards; */
-
 }
 
 .bgStyle{  
@@ -153,29 +119,6 @@ width: 40%;
   z-index: 1;
 }
 
-
-.cardPop{
-  
-  position: fixed;
-  background: orange;
-  width: 100%;
-  top: 0;
-  right: 0;
-  /* transform: translateX(53px) translateY(0px) scaleX(1) scaleY(1) translateZ(10px); */
-  z-index: 100000;
-  align-items: center;
-  display: flex;
-  height: 500px;
-  justify-content: center;
-  width: 100%;
-
-  
-
-}
-
-
-
-
 .card img {
   width: 100%;
 }
@@ -183,13 +126,7 @@ width: 40%;
 @media only screen and  (max-width:768px) {
 
   .cardsSection{
-  /* grid-template-columns: unset; */
-  }
-
-
-  .card{
-    width: 100%;
-    height: auto;
+  grid-template-columns: unset;
   }
   
 }
