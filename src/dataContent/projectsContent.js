@@ -87,6 +87,46 @@ export const projects = [
         "className_5" : className_5
         
   
+    },
+    {
+        "id" : 4 ,
+        "contreId" : "noselection_3",
+        "cardPopId" : "cardPop_3",
+        "title" : "Adaptation and flexibility" ,
+        "description" : "We provide the right tool to align with your political and marketing standards and constraints" ,
+        "link" : "https://skillshop.exceedlms.com/profiles/71ae9f8215d444b5bc15e8601278c097",
+        "bg" : "linear-gradient(to right, #3b92ec 0%, #fc21ab 100%)",
+        "image" : "",
+        "altimage" : "",
+        "longtext" : "",
+        "extracontent" : "",
+        "className" : className,
+        "className_2" : className_2,
+        "className_3" : className_3,
+        "className_4" : className_4,
+        "className_5" : className_5
+        
+  
+    },
+    {
+        "id" : 5 ,
+        "contreId" : "noselection_3",
+        "cardPopId" : "cardPop_3",
+        "title" : "AWS Amplify" ,
+        "description" : "Continuous deploys & integration give you all flexibility to try/test your hypothesis which is susceptible to improving the results of your goals.",
+        "link" : "https://skillshop.exceedlms.com/profiles/71ae9f8215d444b5bc15e8601278c097",
+        "bg" : "linear-gradient(to right, #ffe633 0%, #fc6121 100%)",
+        "image" : "",
+        "altimage" : "",
+        "longtext" : "",
+        "extracontent" : "",
+        "className" : className,
+        "className_2" : className_2,
+        "className_3" : className_3,
+        "className_4" : className_4,
+        "className_5" : className_5
+        
+  
     }
   
   ];

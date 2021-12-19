@@ -10,13 +10,15 @@ const Page = () => {
 
 const[selectedCard , setSelectedCard] = useState(null);
 
+const[mouseOverStatus , setMouseOverStatus ] = useState(null);
+
 // const[closeCardPopStatus , setCloseCardPopStatus ] = useState(null);
 
 let thisCardPop =  parseInt(selectedCard);   
 
 // let thisCloseCardPopStatus = String(closeCardPopStatus);
 
-console.log ("-> thisCardPop -> " + thisCardPop);
+console.log ("-> mouseOverStatus -> " + mouseOverStatus);
 
 // console.log ("-> closeCardPopStatus -> " + thisCloseCardPopStatus);
 
@@ -32,7 +34,7 @@ console.log(projects);
 
      
 
-      {isNaN(thisCardPop) === true && 
+      {isNaN(thisCardPop) && 
         <Header />}
 
       {isNaN(thisCardPop) !== true &&
@@ -54,14 +56,15 @@ console.log(projects);
           image={projects[thisCardPop].image}
           altimage={projects[thisCardPop].altimage}
           selectedCard={selectedCard}
-          setSelectedCard ={setSelectedCard}
+          setSelectedCard={setSelectedCard}
+         
           // closeCardPopStatus={closeCardPopStatus}
           // setCloseCardPopStatus ={setCloseCardPopStatus}
            />
              
       }   
       
-      {isNaN(thisCardPop) === true && 
+      {isNaN(thisCardPop) && 
 
       <div className="cardsSection">
 
@@ -87,6 +90,8 @@ console.log(projects);
             altimage={project.altimage}
             selectedCard={selectedCard}
             setSelectedCard ={setSelectedCard}
+            mouseOverStatus={mouseOverStatus}
+            setMouseOverStatus={setMouseOverStatus}
             
             />
             
@@ -96,10 +101,15 @@ console.log(projects);
           
           
       </div>
+      
 
     }
 
-        <div className="bgStyle"></div>            
+      {isNaN(thisCardPop) &&
+      <div className="bgStyle"></div>     
+      }
+
+               
         
       </div>    
 
