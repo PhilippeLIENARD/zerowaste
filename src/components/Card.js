@@ -12,9 +12,9 @@ const Card = (props) => {
                     // className={props.className}
                     style={{background: props.bg}}
                     id={props.id}
-                    // onClick={() => props.setselectedCard(props.id) }
-                    onMouseOver={() => {props.setSelectedCard(props.id)}}
-                    onMouseOut={() => {props.setSelectedCard(null)}}
+                    onClick={() => props.setSelectedCard(props.id) }
+                    // onMouseOver={() => {props.setSelectedCard(props.id)}}
+                    // onMouseOut={() => {props.setSelectedCard(null)}}
                     >
 
 

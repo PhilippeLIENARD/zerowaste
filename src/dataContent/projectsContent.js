@@ -87,6 +87,26 @@ export const projects = [
         "className_5" : className_5
         
   
+    },
+    {
+        "id" : 3 ,
+        "contreId" : "noselection_3",
+        "cardPopId" : "cardPop_3",
+        "title" : "Adaptation and flexibility" ,
+        "description" : "We provide the right tool to align with your political and marketing standards and constraints" ,
+        "link" : "https://skillshop.exceedlms.com/profiles/71ae9f8215d444b5bc15e8601278c097",
+        "bg" : "linear-gradient(to right, #3b92ec 0%, #fc21ab 100%)",
+        "image" : "",
+        "altimage" : "",
+        "longtext" : "",
+        "extracontent" : "",
+        "className" : className,
+        "className_2" : className_2,
+        "className_3" : className_3,
+        "className_4" : className_4,
+        "className_5" : className_5
+        
+  
     }
   
   ];
