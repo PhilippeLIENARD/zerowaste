@@ -3,6 +3,9 @@ const Card = (props) => {
     
     // console.log('props ');
     
+    let thisOverStatus = parseInt(props.mouseOverStatus);
+
+    console.log("thisOverStatus -> " + thisOverStatus)
 
     const content = 
     <>        
@@ -12,13 +15,23 @@ const Card = (props) => {
                     // className={props.className}
                     style={{background: props.bg}}
                     id={props.id}
-                    onClick={() => props.setSelectedCard(props.id) }
-                    // onMouseOver={() => {props.setSelectedCard(props.id)}}
-                    // onMouseOut={() => {props.setSelectedCard(null)}}
+                    
+                    // onDoubleClick={() => props.setSelectedCard(props.id)}
+                    onClick={() => props.setSelectedCard(props.id)}
+                    // onClick={() => props.setSelectedCard(props.id) }
+                    // onClick={() => props.setMouseOverStatus(props.id)}
+                    onMouseOver={() => props.setMouseOverStatus(props.id)}
+                    onMouseLeave={() => props.setMouseOverStatus(null)}
                     >
 
 
-                        <h2>{props.title}</h2>  
+                        <h2>{props.title}</h2> 
+
+                        <p>{props.description}</p>
+
+                        {(thisOverStatus === props.id) &&
+                            <p className="readMore">read more</p>
+                        } 
 
                 </div> 
           
