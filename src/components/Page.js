@@ -17,6 +17,8 @@ let thisCardPop =  parseInt(selectedCard);
 
 // let thisCloseCardPopStatus = String(closeCardPopStatus);
 
+console.log("selectedCard -> " + selectedCard);
+
 console.log ("-> mouseOverStatus -> " + mouseOverStatus);
 
 // console.log ("-> closeCardPopStatus -> " + thisCloseCardPopStatus);

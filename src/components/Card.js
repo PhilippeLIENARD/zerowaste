@@ -5,8 +5,6 @@ const Card = (props) => {
     
     let thisOverStatus = parseInt(props.mouseOverStatus);
 
-    console.log("thisOverStatus -> " + thisOverStatus)
-
     let isOver = () => (thisOverStatus === props.id) ? true : false ; 
 
     const content = 
@@ -18,7 +16,7 @@ const Card = (props) => {
                     id={props.id}
                     
                     onTouchStart={() => props.setMouseOverStatus(props.id)}
-                    onTouchEnd={() => {props.setSelectedCard(props.id) ; window.scrollTo(0,0)}}
+                    // onTouchEnd={() => {props.setSelectedCard(props.id) ; window.scrollTo(0,0)}}
                     
                     onMouseOver={() => props.setMouseOverStatus(props.id)}
                     onMouseLeave={() => props.setMouseOverStatus(null)}
