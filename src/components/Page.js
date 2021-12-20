@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Header from './Header';
-import '../Page.css';
 import Card from './Card';
 import CardPop from "./CardPop";
 import {projects} from '../dataContent/projectsContent.js';
@@ -57,6 +56,8 @@ console.log(projects);
           altimage={projects[thisCardPop].altimage}
           selectedCard={selectedCard}
           setSelectedCard={setSelectedCard}
+          mouseOverStatus={mouseOverStatus}
+          setMouseOverStatus={setMouseOverStatus}
          
           // closeCardPopStatus={closeCardPopStatus}
           // setCloseCardPopStatus ={setCloseCardPopStatus}
