@@ -5,9 +5,15 @@ const CardPop = (props) => {
     const content =
 
     <>
+        
+        
         <div 
-        className="homeIcon"
-        onClick ={() => props.setSelectedCard("closed")}
+        className="homeIcon"        
+
+        onTouchEnd={() => {props.setSelectedCard(null) ; props.setMouseOverStatus(null)}}
+
+        onClick={() => {props.setSelectedCard(null) ; props.setMouseOverStatus(null)}}
+        
 
         >
             
@@ -23,10 +29,11 @@ const CardPop = (props) => {
 
         <div 
             className={props.className_4}
-            style={{background: props.bg}}
-                // className={props.className_4}
-                // style={{background: props.bg}}
-            >           
+            style={{background:props.bg}}
+
+            onTouchMove={() => console.log("***move => " + document.getElementById('root').clientX)}
+               
+        >           
 
             
                 <div className="wrapperCardPop">

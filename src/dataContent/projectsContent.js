@@ -1,6 +1,6 @@
 // let idKey = -1;
 const className = "card";
-const className_2 = "card cardOpen";
+const className_2 = className + " cardHover";
 const className_3 = "cardState_3";
 const className_4 = "cardPop";
 const className_5 = "miniList";

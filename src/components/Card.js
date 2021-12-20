@@ -7,29 +7,33 @@ const Card = (props) => {
 
     console.log("thisOverStatus -> " + thisOverStatus)
 
+    let isOver = () => (thisOverStatus === props.id) ? true : false ; 
+
     const content = 
     <>        
                 <div 
 
-                    className={props.className}
-                    // className={props.className}
+                    className={isOver() ? props.className_2 : props.className}                    
                     style={{background: props.bg}}
                     id={props.id}
                     
-                    // onDoubleClick={() => props.setSelectedCard(props.id)}
-                    onClick={() => props.setSelectedCard(props.id)}
-                    // onClick={() => props.setSelectedCard(props.id) }
-                    // onClick={() => props.setMouseOverStatus(props.id)}
+                    onTouchStart={() => props.setMouseOverStatus(props.id)}
+                    onTouchEnd={() => {props.setSelectedCard(props.id) ; window.scrollTo(0,0)}}
+                    
                     onMouseOver={() => props.setMouseOverStatus(props.id)}
                     onMouseLeave={() => props.setMouseOverStatus(null)}
-                    >
+
+                    onClick={() => {props.setSelectedCard(props.id) ; window.scrollTo(0,0)}}
+
+
+                >
 
 
                         <h2>{props.title}</h2> 
 
                         <p>{props.description}</p>
 
-                        {(thisOverStatus === props.id) &&
+                        { isOver() &&
                             <p className="readMore">read more</p>
                         } 
 
