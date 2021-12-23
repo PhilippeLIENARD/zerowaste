@@ -5,7 +5,6 @@ import ReactDOM from 'react-dom';
 // import './styles.css';
 import './css/min/styles.min.css'
 import Page from './components/Page';
-import isInMiddleOfViewPort from './tools/isInMiddleOfViewPort';
 import reportWebVitals from './reportWebVitals';
 
 
@@ -19,4 +18,4 @@ ReactDOM.render(<Page />, document.getElementById('root'));
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
-isInMiddleOfViewPort();
+

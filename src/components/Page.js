@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Header from './Header';
 import Card from './Card';
 import CardPop from "./CardPop";
+import isInMiddleOfViewPort from '../tools/isInMiddleOfViewPort';
 import {projects} from '../dataContent/projectsContent.js';
 
 
@@ -13,7 +14,7 @@ const[mouseOverStatus , setMouseOverStatus ] = useState([null,'noTouched']);
 
 let [whichOver , overStatus] = mouseOverStatus; 
 
-let atLeastOneCardIsOver = () => (overStatus == 'overCard') ? true : false;
+let atLeastOneCardIsOver = () => (overStatus === 'overCard') ? true : false;
 
 
 // const[closeCardPopStatus , setCloseCardPopStatus ] = useState(null);
@@ -34,9 +35,13 @@ console.log ("-> atLeastOneCardIsOver -> " + atLeastOneCardIsOver());
 // console.log(projects);
 
 
+
   const content =      
        
-      <div className="Page">
+      <div className="Page"
+      onTouchStart={() => isInMiddleOfViewPort()} 
+      onWheel={() => isInMiddleOfViewPort()} 
+      >
 
      
 
@@ -120,11 +125,11 @@ console.log ("-> atLeastOneCardIsOver -> " + atLeastOneCardIsOver());
       <div className="bgStyle"></div>     
       }
 
-               
+              
         
       </div>   
     
-      
+  
       return (
         <>
             {content}
