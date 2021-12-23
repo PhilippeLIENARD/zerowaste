@@ -35,8 +35,8 @@ const Card = (props) => {
                     style={{...background}}
                     id={props.id}
                     
-                    onTouchStart={() => props.setMouseOverStatus([props.id , 'overCard'])}
-                    onTouchEnd={() => {props.setSelectedCard(props.id) ; window.scrollTo(0,0)}}
+                    // onTouchStart={() => props.setMouseOverStatus([props.id , 'overCard'])}
+                    // onTouchEnd={() => {props.setSelectedCard(props.id) ; window.scrollTo(0,0)}}
                     
                     onMouseOver={() => props.setMouseOverStatus([props.id , 'overCard'])}
                     onMouseLeave={() => props.setMouseOverStatus([null , 'notOver'])}
