@@ -10,9 +10,9 @@ const CardPop = (props) => {
         <div 
         className="homeIcon"        
 
-        onTouchEnd={() => {props.setSelectedCard(null) ; props.setMouseOverStatus(null)}}
+        onTouchEnd={() => {props.setSelectedCard(null) ; props.setMouseOverStatus([null,'noTouched'])}}
 
-        onClick={() => {props.setSelectedCard(null) ; props.setMouseOverStatus(null)}}
+        onClick={() => {props.setSelectedCard(null) ; props.setMouseOverStatus([null,'noTouched'])}}
         
 
         >

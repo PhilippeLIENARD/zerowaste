@@ -128,22 +128,32 @@ code {
           box-shadow: rgba(0, 0, 0, 0.281) 0px 3px 10px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.404);
   width: 300px;
-  min-height: 210px;
+  height: 200px;
+  opacity: 1;
 }
 
 .card h2 {
   line-height: 28px;
 }
 
-.cardHover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+.bluredlines {
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+  opacity: 0.8;
   -webkit-transform-origin: center center;
           transform-origin: center center;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.cardHover {
   z-index: 3;
   -webkit-box-shadow: rgba(0, 0, 0, 0.308) 0px 3px 10px;
           box-shadow: rgba(0, 0, 0, 0.308) 0px 3px 10px;
-  height: 300px;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 @-webkit-keyframes cardOpenAnim {
