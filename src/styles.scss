@@ -110,7 +110,9 @@ body {
     box-shadow: $cardShadow;
     text-shadow: $cardTextShadow;
     width: 300px;
-    min-height: 210px;
+    height: 200px;
+    opacity:1;
+    
 
         h2{
             line-height: 28px;
@@ -119,15 +121,25 @@ body {
     
     }
 
+    .bluredlines{
+      filter: blur(4px);
+      opacity: 0.8;
+      transform-origin: center center;
+      transform: scale(0.9);
+    
+    }
+
     
 
   
  .cardHover {
-    transform: scale(1.1);
-    transform-origin: center center;
+    
     z-index: 3;
+    // margin-top: -80px;
     box-shadow:  $cardShadowHover ;
-    height: 300px;
+    // height: 210px;
+    transform-origin: center center;
+    transform: scale(1.05);
   }
   
   @keyframes cardOpenAnim {

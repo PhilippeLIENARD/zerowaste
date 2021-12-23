@@ -9,7 +9,12 @@ const Page = () => {
 
 const[selectedCard , setSelectedCard] = useState(null);
 
-const[mouseOverStatus , setMouseOverStatus ] = useState(null);
+const[mouseOverStatus , setMouseOverStatus ] = useState([null,'noTouched']);
+
+let [whichOver , overStatus] = mouseOverStatus; 
+
+let atLeastOneCardIsOver = () => (overStatus == 'overCard') ? true : false;
+
 
 // const[closeCardPopStatus , setCloseCardPopStatus ] = useState(null);
 
@@ -17,17 +22,58 @@ let thisCardPop =  parseInt(selectedCard);
 
 // let thisCloseCardPopStatus = String(closeCardPopStatus);
 
-console.log("selectedCard -> " + selectedCard);
+// console.log("selectedCard -> " + selectedCard);
 
-console.log ("-> mouseOverStatus -> " + mouseOverStatus);
+// console.log ("-> mouseOverStatus -> " + mouseOverStatus);
 
-// console.log ("-> closeCardPopStatus -> " + thisCloseCardPopStatus);
+// console.log("whichOver -> " + whichOver);
 
-// let selectStatus = () => (selectedCard === null) ? false : true ;
 
-// console.log("selectStatus() ? -> " + selectStatus());
+console.log ("-> atLeastOneCardIsOver -> " + atLeastOneCardIsOver());
 
-console.log(projects);
+// console.log(projects);
+
+
+// let isInMiddle = (classNameToCollect) => {
+
+  let intViewportHeight = window.innerHeight;
+  let middleOfHeight = intViewportHeight / 2;
+
+
+  let cardsCollection = document.getElementsByClassName("card");
+
+  let lengthOfcardsCollection = cardsCollection.length;
+
+  let thisLoopReturn; 
+  let idCurrentElement;
+  let thisElement;
+  let topPos;
+  let bottomPos;
+  let k;
+
+  for(k=0 ; k<lengthOfcardsCollection ; k++){
+
+      thisLoopReturn = cardsCollection[k];
+
+      console.log("thisLoopReturn : " + thisLoopReturn);
+      console.log(thisLoopReturn);
+      thisElement = thisLoopReturn.getBoundingClientRect();
+      console.log("middleOfHeight -> "+ middleOfHeight);
+      topPos = thisElement.top;
+      bottomPos = thisElement.bottom;
+      idCurrentElement = thisLoopReturn.getAttribute("id");
+      console.log("topPos -> " + topPos);
+      console.log("bottomPos -> " + bottomPos);
+      console.log("idCurrentElement -> " + idCurrentElement);
+
+      (middleOfHeight >= topPos && middleOfHeight <= bottomPos) ? console.log('Yes I\'m inMiddle') : console.log('NOT IN Middle'); 
+
+
+  }
+
+// }
+
+// onScroll=isInMiddle();
 
   const content =      
        
@@ -36,36 +82,7 @@ console.log(projects);
      
 
       {isNaN(thisCardPop) && 
-        <Header />}
-
-      {isNaN(thisCardPop) !== true &&
-            
-         <CardPop
-          key={projects[thisCardPop].id}
-          id={projects[thisCardPop].id}
-          contreId={projects[thisCardPop].contreId}
-          className={projects[thisCardPop].className}
-          className_2={projects[thisCardPop].className_2}
-          className_3={projects[thisCardPop].className_3}
-          className_4={projects[thisCardPop].className_4}
-          className_5={projects[thisCardPop].className_5}    
-          title={projects[thisCardPop].title}
-          description={projects[thisCardPop].description}
-          longtext={projects[thisCardPop].longtext}            
-          bg={projects[thisCardPop].bg}
-          link={projects[thisCardPop].link}
-          image={projects[thisCardPop].image}
-          altimage={projects[thisCardPop].altimage}
-          selectedCard={selectedCard}
-          setSelectedCard={setSelectedCard}
-          mouseOverStatus={mouseOverStatus}
-          setMouseOverStatus={setMouseOverStatus}
-         
-          // closeCardPopStatus={closeCardPopStatus}
-          // setCloseCardPopStatus ={setCloseCardPopStatus}
-           />
-             
-      }   
+        <Header />}      
       
       {isNaN(thisCardPop) && 
 
@@ -73,13 +90,15 @@ console.log(projects);
 
         {      
             
-          projects.map((project) => 
+          projects.map((project) =>             
           
             <Card 
             key={project.id}
             id={project.id}
             contreId={project.contreId}
-            className={project.className}
+            
+            className={atLeastOneCardIsOver()?project.className_focus:project.className}
+            
             className_2={project.className_2}
             className_3={project.className_3}
             className_4={project.className_4}
@@ -95,18 +114,48 @@ console.log(projects);
             setSelectedCard ={setSelectedCard}
             mouseOverStatus={mouseOverStatus}
             setMouseOverStatus={setMouseOverStatus}
+            overStatus={overStatus}
             
             />
+          
             
           )
            
         }
           
           
-      </div>
-      
+      </div>      
 
-    }
+      }
+
+      {isNaN(thisCardPop) !== true &&
+            
+            <CardPop
+             key={projects[thisCardPop].id}
+             id={projects[thisCardPop].id}
+             contreId={projects[thisCardPop].contreId}
+             className={projects[thisCardPop].className}
+             className_2={projects[thisCardPop].className_2}
+             className_3={projects[thisCardPop].className_3}
+             className_4={projects[thisCardPop].className_4}
+             className_5={projects[thisCardPop].className_5}    
+             title={projects[thisCardPop].title}
+             description={projects[thisCardPop].description}
+             longtext={projects[thisCardPop].longtext}            
+             bg={projects[thisCardPop].bg}
+             link={projects[thisCardPop].link}
+             image={projects[thisCardPop].image}
+             altimage={projects[thisCardPop].altimage}
+             selectedCard={selectedCard}
+             setSelectedCard={setSelectedCard}
+             mouseOverStatus={mouseOverStatus}
+             setMouseOverStatus={setMouseOverStatus}          
+            
+             // closeCardPopStatus={closeCardPopStatus}
+             // setCloseCardPopStatus ={setCloseCardPopStatus}
+              />
+                
+        }
 
       {isNaN(thisCardPop) &&
       <div className="bgStyle"></div>     
@@ -114,8 +163,7 @@ console.log(projects);
 
                
         
-      </div>    
-
+      </div>   
     
       
       return (

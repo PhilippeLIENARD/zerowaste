@@ -1,5 +1,6 @@
 // let idKey = -1;
 const className = "card";
+const className_focus = "card bluredlines";
 const className_2 = className + " cardHover";
 const className_3 = "cardState_3";
 const className_4 = "cardPop";
@@ -22,7 +23,8 @@ export const projects = [
         "className_2" : className_2,
         "className_3" : className_3,
         "className_4" : className_4,
-        "className_5" : className_5
+        "className_5" : className_5,
+        "className_focus" : className_focus
         
         
         
@@ -44,7 +46,8 @@ export const projects = [
         "className_2" : className_2,
         "className_3" : className_3,
         "className_4" : className_4,
-        "className_5" : className_5
+        "className_5" : className_5,
+        "className_focus" : className_focus
         
   
     },
@@ -64,7 +67,8 @@ export const projects = [
         "className_2" : className_2,
         "className_3" : className_3,
         "className_4" : className_4,
-        "className_5" : className_5
+        "className_5" : className_5,
+        "className_focus" : className_focus
         
   
     },
@@ -84,7 +88,8 @@ export const projects = [
         "className_2" : className_2,
         "className_3" : className_3,
         "className_4" : className_4,
-        "className_5" : className_5
+        "className_5" : className_5,
+        "className_focus" : className_focus
         
   
     },
@@ -104,7 +109,8 @@ export const projects = [
         "className_2" : className_2,
         "className_3" : className_3,
         "className_4" : className_4,
-        "className_5" : className_5
+        "className_5" : className_5,
+        "className_focus" : className_focus
         
   
     },
@@ -124,7 +130,8 @@ export const projects = [
         "className_2" : className_2,
         "className_3" : className_3,
         "className_4" : className_4,
-        "className_5" : className_5
+        "className_5" : className_5,
+        "className_focus" : className_focus
         
   
     }
