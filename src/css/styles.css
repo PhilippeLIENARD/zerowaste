@@ -137,8 +137,6 @@ code {
 }
 
 .blurredlines {
-  -webkit-filter: blur(4px);
-          filter: blur(4px);
   opacity: 0.8;
   -webkit-transform-origin: center center;
           transform-origin: center center;
@@ -337,8 +335,6 @@ code {
   }
   .card {
     /*default settings for mobile .card class include the mixin blurredLinesMix */
-    -webkit-filter: blur(4px);
-            filter: blur(4px);
     opacity: 0.8;
     -webkit-transform-origin: center center;
             transform-origin: center center;

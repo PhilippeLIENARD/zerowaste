@@ -138,7 +138,7 @@ const thisIsInTheMiddle = parseInt(inTheMiddle);
         }
 
       {isNaN(thisCardPop) &&
-      <div className="bgStyle"></div>     
+      <><div className="bgStyle"></div><div style={{ height: "1500px" }}></div></>   
       }
 
               
