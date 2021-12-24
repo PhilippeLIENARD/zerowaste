@@ -115,7 +115,7 @@ code {
   background: linear-gradient(to right, #d4145a 0%, #fbb03b 100%);
   /* transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s !important; */
   /* padding-top: 4rem;
-    padding-bottom: 4rem; */
+  padding-bottom: 4rem; */
   text-decoration: none;
   /* transform: translateY(-5px); */
   /* box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px; */
@@ -136,7 +136,7 @@ code {
   line-height: 28px;
 }
 
-.bluredlines {
+.blurredlines {
   -webkit-filter: blur(4px);
           filter: blur(4px);
   opacity: 0.8;
@@ -147,6 +147,36 @@ code {
 }
 
 .cardHover {
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  line-height: 1.625;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-size: 18px;
+  -webkit-text-size-adjust: 100%;
+  text-align: left;
+  position: relative;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  background: -webkit-gradient(linear, left top, right top, from(#d4145a), to(#fbb03b));
+  background: linear-gradient(to right, #d4145a 0%, #fbb03b 100%);
+  /* transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s !important; */
+  /* padding-top: 4rem;
+  padding-bottom: 4rem; */
+  text-decoration: none;
+  /* transform: translateY(-5px); */
+  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px; */
+  color: white !important;
+  z-index: 2;
+  -webkit-transition: all 0.2s !important;
+  transition: all 0.2s !important;
+  cursor: pointer;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.281) 0px 3px 10px;
+          box-shadow: rgba(0, 0, 0, 0.281) 0px 3px 10px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.404);
+  width: 300px;
+  height: 200px;
+  opacity: 1;
   z-index: 3;
   -webkit-box-shadow: rgba(0, 0, 0, 0.308) 0px 3px 10px;
           box-shadow: rgba(0, 0, 0, 0.308) 0px 3px 10px;
@@ -306,8 +336,57 @@ code {
     /* grid-template-columns: unset; */
   }
   .card {
+    /*default settings for mobile .card class include the mixin blurredLinesMix */
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    opacity: 0.8;
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
     width: 100%;
-    /* height: auto; */
+  }
+  .inTheMiddle {
+    font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    line-height: 1.625;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    font-size: 18px;
+    -webkit-text-size-adjust: 100%;
+    text-align: left;
+    position: relative;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    background: -webkit-gradient(linear, left top, right top, from(#d4145a), to(#fbb03b));
+    background: linear-gradient(to right, #d4145a 0%, #fbb03b 100%);
+    /* transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s !important; */
+    /* padding-top: 4rem;
+  padding-bottom: 4rem; */
+    text-decoration: none;
+    /* transform: translateY(-5px); */
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px; */
+    color: white !important;
+    z-index: 2;
+    -webkit-transition: all 0.2s !important;
+    transition: all 0.2s !important;
+    cursor: pointer;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.281) 0px 3px 10px;
+            box-shadow: rgba(0, 0, 0, 0.281) 0px 3px 10px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.404);
+    width: 300px;
+    height: 200px;
+    opacity: 1;
+    z-index: 3;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.308) 0px 3px 10px;
+            box-shadow: rgba(0, 0, 0, 0.308) 0px 3px 10px;
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  .cardHover {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=styles.css.map */

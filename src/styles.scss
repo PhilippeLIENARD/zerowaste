@@ -5,7 +5,53 @@ $pageLink : #61dafb;
 $cardShadow : rgba(0, 0, 0, 0.281) 0px 3px 10px;
 $cardShadowHover : rgba(0, 0, 0, 0.308) 0px 3px 10px;
 $cardTextShadow : 1px 1px 1px rgba(0, 0, 0, 0.404);
+$mobileWidth : 768px;
 
+
+@mixin blurredLinesMix {
+  filter: blur(4px);
+  opacity: 0.8;
+  transform-origin: center center;
+  transform: scale(0.9);
+}
+
+@mixin cardMix {
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  line-height: 1.625;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-size: 18px;
+  -webkit-text-size-adjust: 100%;
+  text-align: left;
+
+  position: relative;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  background: linear-gradient(to right, rgb(212, 20, 90) 0%, rgb(251, 176, 59) 100%);
+  /* transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s !important; */
+  /* padding-top: 4rem;
+  padding-bottom: 4rem; */
+  text-decoration: none;
+  /* transform: translateY(-5px); */
+  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px; */
+  color: white !important;
+  z-index: 2;
+  transition: all 0.2s !important;    
+  cursor: pointer;
+  box-shadow: $cardShadow;
+  text-shadow: $cardTextShadow;
+  width: 300px;
+  height: 200px;
+  opacity:1;
+}
+
+@mixin cardOverMix {
+    z-index: 3;
+    box-shadow:  $cardShadowHover ;
+    transform-origin: center center;
+    transform: scale(1.05);
+}
 
 body {
     background-color: $bodyBg ;
@@ -84,35 +130,8 @@ body {
   }
 
   .card {
-    font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    line-height: 1.625;
-    font-weight: 400;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    font-size: 18px;
-    -webkit-text-size-adjust: 100%;
-    text-align: left;
 
-    position: relative;
-    border-radius: 0.5rem;
-    padding: 2rem;
-    background: linear-gradient(to right, rgb(212, 20, 90) 0%, rgb(251, 176, 59) 100%);
-    /* transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s !important; */
-    /* padding-top: 4rem;
-    padding-bottom: 4rem; */
-    text-decoration: none;
-    /* transform: translateY(-5px); */
-    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px; */
-    color: white !important;
-    z-index: 2;
-    transition: all 0.2s !important;    
-    cursor: pointer;
-    box-shadow: $cardShadow;
-    text-shadow: $cardTextShadow;
-    width: 300px;
-    height: 200px;
-    opacity:1;
-    
+    @include cardMix;
 
         h2{
             line-height: 28px;
@@ -121,25 +140,22 @@ body {
     
     }
 
-    .bluredlines{
-      filter: blur(4px);
-      opacity: 0.8;
-      transform-origin: center center;
-      transform: scale(0.9);
     
-    }
 
+.blurredlines{
+
+  @include blurredLinesMix;
     
+}
 
   
- .cardHover {
+ .cardHover {    
+
+  @include cardMix;
+
+  @include cardOverMix;
+
     
-    z-index: 3;
-    // margin-top: -80px;
-    box-shadow:  $cardShadowHover ;
-    // height: 210px;
-    transform-origin: center center;
-    transform: scale(1.05);
   }
   
   @keyframes cardOpenAnim {
@@ -259,7 +275,7 @@ body {
 
 
 
-@media only screen and  (max-width:768px) {
+@media only screen and  (max-width:$mobileWidth) {
 
 .cardsSection{
   /* grid-template-columns: unset; */
@@ -267,9 +283,20 @@ body {
 
 
   .card{
+    /*default settings for mobile .card class include the mixin blurredLinesMix */
+    @include blurredLinesMix;
     width: 100%;
-    /* height: auto; */
+    
   }
+
+  .inTheMiddle{
+    @include cardMix;
+    @include cardOverMix;
+  }
+
+  .cardHover {  
+      width: 100%;
+    }
   
 }
   

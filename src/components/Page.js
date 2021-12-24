@@ -2,25 +2,34 @@ import React, { useState } from 'react';
 import Header from './Header';
 import Card from './Card';
 import CardPop from "./CardPop";
+import isInMiddleOfViewPort from '../tools/isInMiddleOfViewPort';
 import {projects} from '../dataContent/projectsContent.js';
 
 
 const Page = () => {
 
-const[selectedCard , setSelectedCard] = useState(null);
+// Hooks:
+const [selectedCard , setSelectedCard] = useState(null);
 
-const[mouseOverStatus , setMouseOverStatus ] = useState([null,'noTouched']);
+const [mouseOverStatus , setMouseOverStatus ] = useState([null,'noTouched']);
+
+const [inTheMiddle , setInTheMiddle] = useState(0);
+
+// Vars and stuffs from hooks:
+
+let thisCardPop =  parseInt(selectedCard);
 
 let [whichOver , overStatus] = mouseOverStatus; 
 
-let atLeastOneCardIsOver = () => (overStatus == 'overCard') ? true : false;
+let atLeastOneCardIsOver = () => (overStatus === 'overCard') ? true : false;
 
+const thisIsInTheMiddle = parseInt(inTheMiddle);
 
-// const[closeCardPopStatus , setCloseCardPopStatus ] = useState(null);
+// console.log("- - - inTheMiddle " + thisIsInTheMiddle);
 
-let thisCardPop =  parseInt(selectedCard);   
+// // logs & stuffs:
 
-// let thisCloseCardPopStatus = String(closeCardPopStatus);
+// let [inTheMiddleState , inTheMiddleID] = inTheMiddle;
 
 // console.log("selectedCard -> " + selectedCard);
 
@@ -28,61 +37,23 @@ let thisCardPop =  parseInt(selectedCard);
 
 // console.log("whichOver -> " + whichOver);
 
-
-console.log ("-> atLeastOneCardIsOver -> " + atLeastOneCardIsOver());
+// console.log ("-> atLeastOneCardIsOver -> " + atLeastOneCardIsOver());
 
 // console.log(projects);
 
-
-// let isInMiddle = (classNameToCollect) => {
-
-  let intViewportHeight = window.innerHeight;
-  let middleOfHeight = intViewportHeight / 2;
-
-
-  let cardsCollection = document.getElementsByClassName("card");
-
-  let lengthOfcardsCollection = cardsCollection.length;
-
-  let thisLoopReturn; 
-  let idCurrentElement;
-  let thisElement;
-  let topPos;
-  let bottomPos;
-  let k;
-
-  for(k=0 ; k<lengthOfcardsCollection ; k++){
-
-      thisLoopReturn = cardsCollection[k];
-
-      console.log("thisLoopReturn : " + thisLoopReturn);
-      console.log(thisLoopReturn);
-      thisElement = thisLoopReturn.getBoundingClientRect();
-      console.log("middleOfHeight -> "+ middleOfHeight);
-      topPos = thisElement.top;
-      bottomPos = thisElement.bottom;
-      idCurrentElement = thisLoopReturn.getAttribute("id");
-      console.log("topPos -> " + topPos);
-      console.log("bottomPos -> " + bottomPos);
-      console.log("idCurrentElement -> " + idCurrentElement);
-
-      (middleOfHeight >= topPos && middleOfHeight <= bottomPos) ? console.log('Yes I\'m inMiddle') : console.log('NOT IN Middle'); 
-
-
-  }
-
-// }
-
-// onScroll=isInMiddle();
-
   const content =      
        
-      <div className="Page">
+      <div className="Page"
 
-     
+      // onTouchStart={() => isInMiddleOfViewPort("card")} 
+
+      onWheel={() => isInMiddleOfViewPort("card" , setInTheMiddle , inTheMiddle)}
+
+      >    
 
       {isNaN(thisCardPop) && 
-        <Header />}      
+        <Header />
+      }      
       
       {isNaN(thisCardPop) && 
 
@@ -110,11 +81,16 @@ console.log ("-> atLeastOneCardIsOver -> " + atLeastOneCardIsOver());
             link={project.link}
             image={project.image}
             altimage={project.altimage}
+            // hooks:
             selectedCard={selectedCard}
             setSelectedCard ={setSelectedCard}
             mouseOverStatus={mouseOverStatus}
             setMouseOverStatus={setMouseOverStatus}
             overStatus={overStatus}
+            setInTheMiddle={setInTheMiddle}
+            inTheMiddle={inTheMiddle}
+            // below thisIsInTheMiddle is inTheMiddle parsed to int type
+            thisIsInTheMiddle={thisIsInTheMiddle}
             
             />
           
@@ -161,11 +137,11 @@ console.log ("-> atLeastOneCardIsOver -> " + atLeastOneCardIsOver());
       <div className="bgStyle"></div>     
       }
 
-               
+              
         
       </div>   
     
-      
+  
       return (
         <>
             {content}
