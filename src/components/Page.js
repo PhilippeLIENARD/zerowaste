@@ -8,20 +8,28 @@ import {projects} from '../dataContent/projectsContent.js';
 
 const Page = () => {
 
-const[selectedCard , setSelectedCard] = useState(null);
+// Hooks:
+const [selectedCard , setSelectedCard] = useState(null);
 
-const[mouseOverStatus , setMouseOverStatus ] = useState([null,'noTouched']);
+const [mouseOverStatus , setMouseOverStatus ] = useState([null,'noTouched']);
+
+const [inTheMiddle , setInTheMiddle] = useState(0);
+
+// Vars and stuffs from hooks:
+
+let thisCardPop =  parseInt(selectedCard);
 
 let [whichOver , overStatus] = mouseOverStatus; 
 
 let atLeastOneCardIsOver = () => (overStatus === 'overCard') ? true : false;
 
+const thisIsInTheMiddle = parseInt(inTheMiddle);
 
-// const[closeCardPopStatus , setCloseCardPopStatus ] = useState(null);
+// console.log("- - - inTheMiddle " + thisIsInTheMiddle);
 
-let thisCardPop =  parseInt(selectedCard);   
+// // logs & stuffs:
 
-// let thisCloseCardPopStatus = String(closeCardPopStatus);
+// let [inTheMiddleState , inTheMiddleID] = inTheMiddle;
 
 // console.log("selectedCard -> " + selectedCard);
 
@@ -29,24 +37,23 @@ let thisCardPop =  parseInt(selectedCard);
 
 // console.log("whichOver -> " + whichOver);
 
-
-console.log ("-> atLeastOneCardIsOver -> " + atLeastOneCardIsOver());
+// console.log ("-> atLeastOneCardIsOver -> " + atLeastOneCardIsOver());
 
 // console.log(projects);
-
-
 
   const content =      
        
       <div className="Page"
-      onTouchStart={() => isInMiddleOfViewPort()} 
-      onWheel={() => isInMiddleOfViewPort()} 
-      >
 
-     
+      // onTouchStart={() => isInMiddleOfViewPort("card")} 
+
+      onWheel={() => isInMiddleOfViewPort("card" , setInTheMiddle , inTheMiddle)}
+
+      >    
 
       {isNaN(thisCardPop) && 
-        <Header />}      
+        <Header />
+      }      
       
       {isNaN(thisCardPop) && 
 
@@ -74,11 +81,16 @@ console.log ("-> atLeastOneCardIsOver -> " + atLeastOneCardIsOver());
             link={project.link}
             image={project.image}
             altimage={project.altimage}
+            // hooks:
             selectedCard={selectedCard}
             setSelectedCard ={setSelectedCard}
             mouseOverStatus={mouseOverStatus}
             setMouseOverStatus={setMouseOverStatus}
             overStatus={overStatus}
+            setInTheMiddle={setInTheMiddle}
+            inTheMiddle={inTheMiddle}
+            // below thisIsInTheMiddle is inTheMiddle parsed to int type
+            thisIsInTheMiddle={thisIsInTheMiddle}
             
             />
           

@@ -1,7 +1,7 @@
 // let idKey = -1;
 const className = "card";
-const className_focus = "card bluredlines";
-const className_2 = className + " cardHover";
+const className_focus = "card blurredlines";
+const className_2 = "cardHover";
 const className_3 = "cardState_3";
 const className_4 = "cardPop";
 const className_5 = "miniList";
