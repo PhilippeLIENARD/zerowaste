@@ -45,7 +45,7 @@ const thisIsInTheMiddle = parseInt(inTheMiddle);
        
       <div className="Page"
 
-      // onTouchStart={() => isInMiddleOfViewPort("card")} 
+      onTouchStart={() => isInMiddleOfViewPort("card" , setInTheMiddle , inTheMiddle)} 
 
       onWheel={() => isInMiddleOfViewPort("card" , setInTheMiddle , inTheMiddle)}
 

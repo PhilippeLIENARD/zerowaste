@@ -4,23 +4,21 @@ const Card = (props) => {
 
     let isOver = () => (thisOverStatus === props.id) ? true : false ; 
 
-    // do a Bool if window width > or < mobile size returns true or false
-    // add this bool in the isInTheMiddle Bool condition
+    // do a media queries and a Bool type to ask if window width isMobile = true or false
 
-    // let isMobileWidth = () => {
-
-       let isMobile;
+    let isMobile;
         
-       let watchMediaSize = (mediaQuery) => (mediaQuery.matches) ? isMobile = true : isMobile = false;
+    let watchMediaSize = (mediaQuery) => (mediaQuery.matches) ? isMobile = true : isMobile = false;
 
-       const mobileWidth = window.matchMedia("(max-width : 768px)");
+    const mobileWidth = window.matchMedia("(max-width : 768px)");
 
-       watchMediaSize(mobileWidth);
+    watchMediaSize(mobileWidth);
 
-       mobileWidth.addEventListener("change" , watchMediaSize);       
+    mobileWidth.addEventListener("change" , watchMediaSize);    
 
-    // }
-    
+    console.log ("isMobile -> " + isMobile);
+
+    // include isMobile Bool type o, isInTheMiddle to avoid desktop UI conflicts
 
     let isInTheMiddle = () => (props.id === props.thisIsInTheMiddle && isMobile) ? true : false ;
 
