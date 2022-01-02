@@ -45,11 +45,7 @@ const thisIsInTheMiddle = parseInt(inTheMiddle);
        
       <div className="Page"
 
-      onTouchStart={() => isInMiddleOfViewPort("card" , setInTheMiddle , inTheMiddle)} 
-
-      onTouchEnd={() => isInMiddleOfViewPort("card" , setInTheMiddle , inTheMiddle)} 
-
-      onScroll={() => isInMiddleOfViewPort("card" , setInTheMiddle , inTheMiddle)}       
+      // onTouchStart={() => isInMiddleOfViewPort("card")} 
 
       onWheel={() => isInMiddleOfViewPort("card" , setInTheMiddle , inTheMiddle)}
 
@@ -138,7 +134,7 @@ const thisIsInTheMiddle = parseInt(inTheMiddle);
         }
 
       {isNaN(thisCardPop) &&
-      <><div className="bgStyle"></div><div style={{ height: "1500px" }}></div></>   
+      <div className="bgStyle"></div>     
       }
 
               

@@ -14,8 +14,6 @@ let isInMiddleOfViewPort = (classNameToSelect , hook , hookVal) => {
     let topPos;
     let bottomPos;
     let k;  
-    let heightRect;
-    let marginCard;
   
     for(k=0 ; k<lengthOfcardsCollection ; k++){
   
@@ -25,13 +23,10 @@ let isInMiddleOfViewPort = (classNameToSelect , hook , hookVal) => {
         
         topPos = thisElement.top;
         bottomPos = thisElement.bottom;
-        heightRect = thisElement.height;
-
-        marginCard = (heightRect*0.2);
 
         idCurrentElement = thisLoopReturn.getAttribute("id");
 
-        if (middleOfHeight >= (topPos + marginCard) && middleOfHeight <= (bottomPos - marginCard)) {              
+        if (middleOfHeight >= topPos && middleOfHeight <= bottomPos) {              
 
           hook(idCurrentElement)
 
@@ -39,32 +34,22 @@ let isInMiddleOfViewPort = (classNameToSelect , hook , hookVal) => {
 
         }
 
-        // Not used in this function, just for test :
+        // // Not used in this function, just for test :
         // let xCoordinate;
         // let yCoordinate;
         // let leftPos;
-        // let widthRect;
-       
-
         // yCoordinate = thisElement.y;
         // xCoordinate = thisElement.x;
-        // leftPos = thisElement.left;
-       
-        
+        // leftPos = thisElement.left;    
 
-        //to easy understand look console logs :
+        // to easy understand look console logs :
         // console.log("thisLoopReturn : " + thisLoopReturn);
         // console.log(thisLoopReturn);
         // console.log("middleOfHeight -> "+ middleOfHeight);
-        // console.log("heightRect -> " + heightRect);
-        // console.log("marginCard -> " + marginCard);
               
         
         // console.log("topPos -> " + topPos);
-        // console.log("topPos + -> " + (topPos + marginCard));
-
-        // console.log("bottomPos -> " + bottomPos);      
-        // console.log("bottomPos - -> " + (bottomPos - marginCard));
+        // console.log("bottomPos -> " + bottomPos);
 
         // console.log("yCoordinate -> " + yCoordinate);
         // console.log("xCoordinate -> " + xCoordinate);
