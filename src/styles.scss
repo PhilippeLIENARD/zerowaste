@@ -53,6 +53,12 @@ $mobileWidth : 768px;
     transform: scale(1.05);
 }
 
+.smoothLight{
+  position: absolute;
+  width: 200%;
+  
+}
+
 body {
     background-color: $bodyBg ;
     margin: 0;
