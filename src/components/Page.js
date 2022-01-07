@@ -51,6 +51,32 @@ const thisIsInTheMiddle = parseInt(inTheMiddle);
 
       >    
 
+
+       
+    {/* <svg 
+        className='smoothLight'
+        viewBox="0 0 247 207"
+        >
+            <defs>
+                <filter id='blur1' y="-50%" x="-50%" height="280%" width="280%">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="15" />
+                </filter>
+            </defs>
+
+            <path 
+            
+            d="M129.2,109.8C60.9,157.2,26.9,153.1,9.6,128.3C-5.8,106.3-4,44.1,24.4,21.7c28.5-22.5,119-29.4,145.9-2.4
+            C192.5,41.5,181.1,73.8,129.2,109.8z"
+            filter='url(#blur1)'
+            >
+            
+                
+            </path>
+        
+      </svg> */}
+
+     
+      
       {isNaN(thisCardPop) && 
         <Header />
       }      
@@ -133,9 +159,13 @@ const thisIsInTheMiddle = parseInt(inTheMiddle);
                 
         }
 
-      {isNaN(thisCardPop) &&
+       
+
+      {/* {isNaN(thisCardPop) &&
+       
+       
       <div className="bgStyle"></div>     
-      }
+      } */}
 
               
         
