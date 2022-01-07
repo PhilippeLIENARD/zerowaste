@@ -1,6 +1,51 @@
+@-webkit-keyframes smoothLightAnim {
+  0% {
+    fill: #FBB03B;
+    -webkit-transform: none;
+            transform: none;
+  }
+  50% {
+    fill: #93278F;
+  }
+  70% {
+    -webkit-transform: skewY(-2deg);
+            transform: skewY(-2deg);
+  }
+  100% {
+    fill: #FBB03B;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes smoothLightAnim {
+  0% {
+    fill: #FBB03B;
+    -webkit-transform: none;
+            transform: none;
+  }
+  50% {
+    fill: #93278F;
+  }
+  70% {
+    -webkit-transform: skewY(-2deg);
+            transform: skewY(-2deg);
+  }
+  100% {
+    fill: #FBB03B;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
 .smoothLight {
   position: absolute;
   width: 200%;
+}
+
+.smoothLight path {
+  -webkit-animation: smoothLightAnim 6s linear infinite;
+          animation: smoothLightAnim 6s linear infinite;
 }
 
 body {
