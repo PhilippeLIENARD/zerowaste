@@ -53,7 +53,7 @@ const thisIsInTheMiddle = parseInt(inTheMiddle);
 
 
        
-    <svg 
+    {/* <svg 
         className='smoothLight'
         viewBox="0 0 247 207"
         >
@@ -73,7 +73,7 @@ const thisIsInTheMiddle = parseInt(inTheMiddle);
                 
             </path>
         
-      </svg>
+      </svg> */}
 
      
       
@@ -161,11 +161,11 @@ const thisIsInTheMiddle = parseInt(inTheMiddle);
 
        
 
-      {isNaN(thisCardPop) &&
+      {/* {isNaN(thisCardPop) &&
        
        
       <div className="bgStyle"></div>     
-      }
+      } */}
 
               
         
