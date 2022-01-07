@@ -1,52 +1,54 @@
 @-webkit-keyframes smoothLightAnim {
   0% {
-    fill: #FBB03B;
-    -webkit-transform: none;
-            transform: none;
+    fill: #fb3b95;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
   }
   50% {
-    fill: #ff7316;
+    fill: #ffe816;
   }
   70% {
-    -webkit-transform: skewX(-3deg);
-            transform: skewX(-3deg);
+    -webkit-transform: skewX(-9deg) scale(1);
+            transform: skewX(-9deg) scale(1);
   }
   100% {
-    fill: #FBB03B;
-    -webkit-transform: skewX(0deg);
-            transform: skewX(0deg);
+    fill: #fb3b95;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
   }
 }
 
 @keyframes smoothLightAnim {
   0% {
-    fill: #FBB03B;
-    -webkit-transform: none;
-            transform: none;
+    fill: #fb3b95;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
   }
   50% {
-    fill: #ff7316;
+    fill: #ffe816;
   }
   70% {
-    -webkit-transform: skewX(-3deg);
-            transform: skewX(-3deg);
+    -webkit-transform: skewX(-9deg) scale(1);
+            transform: skewX(-9deg) scale(1);
   }
   100% {
-    fill: #FBB03B;
-    -webkit-transform: skewX(0deg);
-            transform: skewX(0deg);
+    fill: #fb3b95;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
   }
 }
 
 .smoothLight {
   position: absolute;
-  width: 800%;
-  z-index: 0;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  fill: #fb3b95;
 }
 
 .smoothLight path {
-  -webkit-animation: smoothLightAnim 20s linear infinite;
-          animation: smoothLightAnim 20s linear infinite;
+  -webkit-animation: smoothLightAnim 6s linear infinite;
+          animation: smoothLightAnim 6s linear infinite;
 }
 
 .headerClass {
@@ -442,9 +444,6 @@ code {
   }
   .cardHover {
     width: 100%;
-  }
-  .smoothLight {
-    width: 1800%;
   }
 }
 /*# sourceMappingURL=styles.css.map */

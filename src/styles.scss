@@ -56,21 +56,20 @@ $mobileWidth : 768px;
 @keyframes smoothLightAnim {
 
   0%{
-    fill:#FBB03B;
-    transform: none;
+    fill:#fb3b95;
+    transform: scale(0.9);
+
    
   }
   50%{
-    fill:#ff7316;
+    fill:#ffe816;
    
     
   }
-  70% { transform: skewX(-3deg);   }
+  70% { transform: skewX(-9deg) scale(1);   }
   100%{
-    fill:#FBB03B;
-    transform: skewX(0deg);
-    
-
+    fill:#fb3b95;
+    transform: scale(0.9);
 
     
   }
@@ -79,19 +78,23 @@ $mobileWidth : 768px;
 
 .smoothLight{
   position: absolute;
-  width: 800%;
-  z-index: 0;
-  // transform: rotate(90deg);
+  
+  z-index: 2;
+  
+  top:0;
+  left:0;
+  fill:#fb3b95;
+
 
   path{
-    animation: smoothLightAnim 20s linear infinite;
+    animation: smoothLightAnim 6s linear infinite;
     
   }
   
 }
 
 .headerClass{
-  z-index: 10;;
+  z-index: 10;
 }
 
 body {
@@ -341,7 +344,7 @@ body {
 
     .smoothLight{
      
-      width: 1800%;
+      
     }
     
     
