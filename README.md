@@ -1,5 +1,7 @@
 Site React en cours de développement : components, hooks & props au programme... A suivre :)
 
+Le repository est connecté à aws amplify et le nom de domaine sera connecté via Route 53 pour la mise en ligne.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
