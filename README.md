@@ -1,3 +1,5 @@
+Site React en cours de développement : components, hooks & props au programme... A suivre :)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
