@@ -51,8 +51,39 @@
           animation: smoothLightAnim 6s linear infinite;
 }
 
+.Page-header {
+  min-height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  z-index: 3;
+  position: relative;
+  padding: 0 50px;
+}
+
 .headerClass {
   z-index: 10;
+}
+
+.headerClass h1 {
+  margin: 0 0 5vh;
+}
+
+.headerClass .baseline {
+  margin: -10px 0 0;
+  font-size: 0.8em;
 }
 
 @-webkit-keyframes bodyGradient {
@@ -108,28 +139,6 @@ code {
     -webkit-animation: React-logo-spin infinite 20s linear;
             animation: React-logo-spin infinite 20s linear;
   }
-}
-
-.Page-header {
-  min-height: 60vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  z-index: 3;
-  position: relative;
-  padding: 0 50px;
 }
 
 .Page-link {
@@ -416,6 +425,34 @@ code {
 }
 
 @media only screen and (max-width: 768px) {
+  @-webkit-keyframes bodyGradient {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 30% 120%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+  @keyframes bodyGradient {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 30% 120%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+  body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 200% 400%;
+    -webkit-animation: bodyGradient 15s ease infinite;
+            animation: bodyGradient 15s ease infinite;
+  }
   .cardsSection {
     /* grid-template-columns: unset; */
   }

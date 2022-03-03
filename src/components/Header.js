@@ -9,10 +9,12 @@ const Header = () => {
         <div className='headerClass'>
         <h1>zerowaste.consulting</h1>
 
-        <h2>Let your marketing goals drive your technical tools</h2>
-        <p>
+        <p className='baseline'>
             Sharp invest by your needs
-        </p>    
+        </p> 
+
+        <h2>Let your marketing goals drive your technical tools</h2>
+           
         </div>
 
       

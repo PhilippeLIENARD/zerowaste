@@ -36,7 +36,7 @@ const Card = (props) => {
     <>        
                 <div 
 
-                    className={(isOver() || isInTheMiddle()) ? props.className_2 : props.className}                    
+                    className={props.className}                    
                     style={{...background}}
                     id={props.id}
                     
@@ -56,9 +56,9 @@ const Card = (props) => {
 
                         <p>{props.description}</p>
 
-                        { (isOver() || isInTheMiddle())  &&
+                        
                             <p className="readMore">read more</p>
-                        } 
+                       
 
                 </div> 
           
