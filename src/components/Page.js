@@ -25,21 +25,21 @@ let atLeastOneCardIsOver = () => (overStatus === 'overCard') ? true : false;
 
 const thisIsInTheMiddle = parseInt(inTheMiddle);
 
-// console.log("- - - inTheMiddle " + thisIsInTheMiddle);
+console.log("- - - inTheMiddle " + thisIsInTheMiddle);
 
-// // logs & stuffs:
+// logs & stuffs:
 
 // let [inTheMiddleState , inTheMiddleID] = inTheMiddle;
 
-// console.log("selectedCard -> " + selectedCard);
+console.log("selectedCard -> " + selectedCard);
 
-// console.log ("-> mouseOverStatus -> " + mouseOverStatus);
+console.log ("-> mouseOverStatus -> " + mouseOverStatus);
 
-// console.log("whichOver -> " + whichOver);
+console.log("whichOver -> " + whichOver);
 
-// console.log ("-> atLeastOneCardIsOver -> " + atLeastOneCardIsOver());
+console.log ("-> atLeastOneCardIsOver -> " + atLeastOneCardIsOver());
 
-// console.log(projects);
+console.log(projects);
 
   const content =      
        

@@ -9,20 +9,20 @@ const Card = (props) => {
 
     // let isMobileWidth = () => {
 
-       let isMobile;
+    //    let isMobile;
         
-       let watchMediaSize = (mediaQuery) => (mediaQuery.matches) ? isMobile = true : isMobile = false;
+    //    let watchMediaSize = (mediaQuery) => (mediaQuery.matches) ? isMobile = true : isMobile = false;
 
-       const mobileWidth = window.matchMedia("(max-width : 768px)");
+    //    const mobileWidth = window.matchMedia("(max-width : 768px)");
 
-       watchMediaSize(mobileWidth);
+    //    watchMediaSize(mobileWidth);
 
-       mobileWidth.addEventListener("change" , watchMediaSize);       
+    //    mobileWidth.addEventListener("change" , watchMediaSize);       
 
     // }
     
 
-    let isInTheMiddle = () => (props.id === props.thisIsInTheMiddle && isMobile) ? true : false ;
+    // let isInTheMiddle = () => (props.id === props.thisIsInTheMiddle && isMobile) ? true : false ;
 
     // console.log("@@@ isInTheMiddle -> " + props.id + " ? " + props.thisIsInTheMiddle + " - " + isInTheMiddle());
     
@@ -36,7 +36,7 @@ const Card = (props) => {
     <>        
                 <div 
 
-                    className={props.className}                    
+                    className={isOver() ? props.className_2 : props.className}                    
                     style={{...background}}
                     id={props.id}
                     
